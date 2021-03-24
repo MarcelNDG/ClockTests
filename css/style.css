@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+
+.container {
+    display: flex;
+    
+   
+}
+
+.skyContainer{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+.sun{  
+    
+    background-color: rgb(255, 0, 0);
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    transition: ease-in;
+        
+}
+
+.sky1{
+    background-color: rgb(97, 179, 179);
+    height: 70vh;
+    width: 100vw;
+    
+}
+.sky2{
+    background-color: rgb(219, 201, 139);
+    height: 20vh;
+    width: 100vw;
+   
+}
+.sky3{
+    background-color: rgb(228, 141, 28);
+    height: 10vh;
+    width: 100vw;
+    
+
