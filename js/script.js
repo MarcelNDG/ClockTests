@@ -9,6 +9,8 @@ function countdown() {
     const newYearsDate = new Date(newYear);
     const currentDate = new Date();
 
+    const windowWidth = window.innerWidth
+
     const totalSeconds = (newYearsDate - currentDate) / 1000;
 
     const days =  Math.floor(totalSeconds / 3600 / 24); 
@@ -21,12 +23,17 @@ function countdown() {
     // minsEl.innerHTML = formatTime(mins);
     // secsEl.innerHTML = formatTime(secs);
 
-    const daysPercentage = ((secs / 60) * 100) 
+    const daysPercentage = ((secs / 60) * 100)
 
+    // console.log(Math.floor(-daysPercentage))
+    console.log(windowWidth);
+    console.log('Days percentage: ' + Math.floor(-daysPercentage));
 
-    console.log(Math.floor(-daysPercentage))
+    const sunPosition = (-daysPercentage / windowWidth  ) / windowWidth * 10000000
+    console.log(`Sun: ${sunPosition}`);
 
-    sun.style.left = `${-daysPercentage * 10}px` 
+    sun.style.left = `${sunPosition}px`
+   
 }
 
 
@@ -51,7 +58,7 @@ container.addEventListener('mousemove', (e) => {
 // const toPercentageX =  ((e.screenX * 100) )
 // console.log(`Percentage X: ${toPercentageX}`);
 
-console.log('Ypercent: ', heightPercent);
-console.log('Xpercent: ', widthPercent);
+// console.log('Ypercent: ', heightPercent);
+// console.log('Xpercent: ', widthPercent);
 })
 
